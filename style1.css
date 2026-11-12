@@ -1,6 +1,3 @@
-/* ==========================================
-   1. 全域與字體設定 (質感色彩風格)
-   ========================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,27 +10,25 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
-  /* 使用帶有溫暖色調的柔和漸層背景，告別單調 */
+
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
   color: #333333;
   line-height: 1.6;
   min-height: 100vh;
 }
 
-/* ==========================================
-   2. 頂部導覽列
-   ========================================== */
+
 header {
   max-width: 850px;
-  margin: 3rem auto 0 auto; /* 跟隨履歷置中，上方留白，下方緊貼 main */
+  margin: 3rem auto 0 auto; 
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 3.5rem;
-  border-top: 5px solid #134769;    /* 把頂部藍色裝飾線移到導覽列最上方 */
-  border-radius: 12px 12px 0 0;     /* 只有上方兩個角是圓角 */
-  border-bottom: 1px solid #e0e4e6; /* 導覽列與下方履歷的分隔線 */
+  border-top: 5px solid #134769;    
+  border-radius: 12px 12px 0 0;     
+  border-bottom: 1px solid #e0e4e6; 
 }
 
 .logo {
@@ -65,34 +60,32 @@ header {
   display: none; 
 }
 
-/* ==========================================
-   3. 主要履歷主容器
-   ========================================== */
+
 main {
   max-width: 850px;
-  margin: 0 auto 3rem auto; /* 上方設為 0，緊貼著 header */
+  margin: 0 auto 3rem auto; 
   background-color: #ffffff;
   padding: 3.5rem;
-  border-radius: 0 0 12px 12px; /* 只有下方兩個角是圓角 */
+  border-radius: 0 0 12px 12px; 
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   
 }
 
 
-/* 讓一般的 section 保持原本的底線分隔，但 #about 獨立出來 */
+
 section {
   margin-bottom: 3.5rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid #eee;
 }
 
-/* 因為 #about 已經有自己的背景色塊了，讓它不需要下方底線 */
+
 #about {
   background-color: #edf3f7;
-  /* 上、右、左用 -3.5rem 往外推齊卡片邊緣，下方保留 3.5rem 間距 */
+
   margin: -3.5rem -3.5rem 3.5rem -3.5rem;
-  padding: 3.5rem; /* 讓裡面的文字跟下面的 02 / SKILLS 對齊 */
+  padding: 3.5rem;
   border-radius: 0;
   border-bottom: none;
   }
@@ -116,22 +109,20 @@ section h2 {
 }
 
 
-/* ==========================================
-   4. 第一區塊：個人基本資訊 (加上背景色 + 照片固定右側)
-   ========================================== */
+
 #about {
-  background-color: #edf3f7; /* 整個 About 區塊都有統一的柔和淺灰藍背景 */
-  padding: 2.5rem;           /* 內距，讓四周保留呼吸空間 */
-  border-radius: 12px;       /* 圓角 */
-  margin-bottom: 3.5rem;     /* 與下方 Skills 的距離 */
-  border-bottom: none;       /* 拿掉原本的底線 */
+  background-color: #edf3f7; 
+  padding: 2.5rem;           
+  border-radius: 12px;      
+  margin-bottom: 3.5rem;     
+  border-bottom: none;     
 }
 
 
 .about-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* 確保是 flex-start 而不是 center */
+  align-items: flex-start; 
   gap: 2.5rem;
 }
 
@@ -141,13 +132,13 @@ section h2 {
   font-weight: 700;
   color: #1a252f;
   margin-bottom: 0.5rem;
-  letter-spacing: 1px; /* 名字字距稍微拉開一點更俐落 */
+  letter-spacing: 1px; 
 }
 
 .custom-slogan {
   font-style: italic;
-  color: #4d80a2;      /* 改用跟進度條一樣的藍灰色，整體色調更統一 */
-  margin-bottom: 1rem; /* 跟下面的科系拉開距離 */
+  color: #4d80a2;      
+  margin-bottom: 1rem; 
   font-size: 1rem;
   font-weight: 500;
 }
@@ -155,23 +146,23 @@ section h2 {
 .about-text p {
   color: #4a5568;
   font-size: 0.95rem;
-  line-height: 1.75;   /* 關鍵：增加行高，自我介紹才不會擠成一團 */
+  line-height: 1.75;   
   margin-bottom: 0.6rem;
 }
-  /* 分類小標籤的樣式 */
+
 .about-group {
-  margin-top: 0.9rem; /* 每個分類之間的距離 */
+  margin-top: 0.9rem; 
 }
 
 .about-tag {
   display: inline-block;
-  background-color: transparent; /* 透明背景 */
-  color: #4d80a2;                /* 藍灰色文字 */
-  border: 1px solid #4d80a2;     /* 關鍵：1px 的藍灰色實線框框 */
+  background-color: transparent; 
+  color: #4d80a2;                
+  border: 1px solid #4d80a2;     
   font-size: 0.78rem;
   font-weight: 600;
   padding: 0.18rem 0.6rem;
-  border-radius: 4px;            /* 想變成膠囊形狀可以改成 20px */
+  border-radius: 4px;           
   margin-bottom: 0.35rem;
   letter-spacing: 0.5px;
 }
@@ -184,7 +175,7 @@ section h2 {
   order: 2;
   width: 150px;
   height: 150px;
-  margin-top: -2rem; /* 關鍵：負數會把整個圓框往上拉，覺得太高就改 -1rem，想再高就改 -2.5rem */
+  margin-top: -2rem; 
   border-radius: 50%;
   object-fit: cover;
   object-position: 50% 15%;
@@ -196,18 +187,15 @@ section h2 {
 
 
 
-/* [特效] 滑鼠移到照片上時微微放大 */
 .profile-img:hover {
   transform: scale(1.03);
 }
 
 
-/* ==========================================
-   5. 第二區塊：專業技能 (圓環進度)
-   ========================================== */
+
 .skills-grid {
   display: grid;
-  /* 讓 5 個項目自動平均分配在同一行，並設定最小寬度避免擠壓 */
+ 
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 1rem;
   text-align: center;
@@ -231,7 +219,6 @@ section h2 {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  /* 圓環進度使用亮眼的藍色系 */
   background: conic-gradient(#4d80a2 85%, #e2ded8 0%);
   display: flex;
   align-items: center;
@@ -256,24 +243,20 @@ section h2 {
   font-size: 0.85rem;
   font-weight: 500;
   color: #333;
-  white-space: nowrap; /* 強制文字不換行 */
+  white-space: nowrap; 
 }
 
 
-/* ==========================================
-   6. 第三區塊：個人經歷
-   ========================================== */
 .exp-item {
-  background-color: #f8fafc; /* 加上柔和的淺灰藍背景 */
-  padding: 1.5rem;           /* 增加內距，讓文字不會貼到框線 */
-  margin-bottom: 1.5rem;     /* 每個方框之間的間距 */
-  border-radius: 10px;       /* 圓角設定 */
-  border: 1px solid #e2e8f0; /* 細微的邊框讓輪廓更明顯 */
-  border-left: 4px solid #4d80a2; /* 保留左側的藍色重點線條 */
+  background-color: #f8fafc; 
+  padding: 1.5rem;           
+  margin-bottom: 1.5rem;     
+  border-radius: 10px;      
+  border: 1px solid #e2e8f0; 
+  border-left: 4px solid #4d80a2; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* [特效] 滑鼠移到經歷卡片時微微浮起 */
 .exp-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(52, 152, 219, 0.08);
@@ -287,7 +270,7 @@ section h2 {
 .exp-date {
   font-size: 0.8rem;
   letter-spacing: 1px;
-  color: #e67e22; /* 日期帶點溫暖橘色 */
+  color: #e67e22; 
   margin-bottom: 0.3rem;
   font-weight: 600;
 }
@@ -317,9 +300,6 @@ section h2 {
   text-decoration: underline;
 }
 
-/* ==========================================
-   7. 第四區塊：聯絡資訊
-   ========================================== */
 .contact-links {
   list-style: none;
   display: flex;
@@ -348,9 +328,6 @@ section h2 {
 
 
 
-/* ==========================================
-   8. 頁尾
-   ========================================== */
 footer {
   text-align: center;
   padding: 1rem 0;
@@ -358,7 +335,7 @@ footer {
   font-size: 0.8rem;
   background: transparent;
   border-top: 1px solid #dcdfe6;
-  /* 回到頂部按鈕 */
+
 .back-to-top {
   display: inline-block;
   margin-bottom: 1rem;
@@ -372,7 +349,6 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* [特效] 滑鼠移到回到頂部按鈕時變色並微微上浮 */
 .back-to-top:hover {
   background-color: #134769;
   color: #ffffff;
