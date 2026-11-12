@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人履歷</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- 頁首與導覽列 -->
+  <header>
+    <div class="logo">個人履歷</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- (一) 個人基本資訊 -->
+    <section id="about">
+      <h2>01 / About Me</h2>
+      <div class="about-container">
+<div class="about-text">
+  <h1>林孜穎</h1>
+  <p class="custom-slogan">keep learning, keep building.</p>
+
+  <div class="about-group">
+    <span class="about-tag">學歷</span>
+    <p>中原大學 資訊管理學系</p>
+  </div>
+
+  <div class="about-group">
+    <span class="about-tag">個性</span>
+    <p>做事負責、個性慢熟</p>
+  </div>
+
+  <div class="about-group">
+    <span class="about-tag">自我介紹</span>
+    <p>目前就讀於中原大學資訊管理學系，在學期間積極接觸網頁前端設計與程式開發，同時也熱衷於參與團隊專案與簡報表達。個性細心且樂於學習新事物，期許自己能用技術解決生活中的問題。</p>
+  </div>
+</div>
+
+        <img src="IMG_9835.JPG" alt="個人照片" class="profile-img">
+      </div>
+    </section>
+
+
+       <!-- (二) 個人專業與技能 (至少 5 項，純 CSS 圓環呈現) -->
+    <section id="skills">
+      <h2>02 / Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="circular-progress" style="background: conic-gradient(#1a1a1a 85%, #e2ded8 0%);">
+            <div class="inner-circle">85%</div>
+          </div>
+          <span>HTML / CSS</span>
+        </div>
+        <div class="skill-item">
+          <div class="circular-progress" style="background: conic-gradient(#1a1a1a 80%, #e2ded8 0%);">
+            <div class="inner-circle">80%</div>
+          </div>
+          <span>程式語言</span>
+        </div>
+        <div class="skill-item">
+          <div class="circular-progress" style="background: conic-gradient(#1a1a1a 90%, #e2ded8 0%);">
+            <div class="inner-circle">90%</div>
+          </div>
+          <span>文書簡報</span>
+        </div>
+    
+        <div class="skill-item">
+          <div class="circular-progress" style="background: conic-gradient(#1a1a1a 90%, #e2ded8 0%);">
+            <div class="inner-circle">90%</div>
+          </div>
+          <span>文書簡報</span>
+        </div>
+        <div class="skill-item">
+          <div class="circular-progress" style="background: conic-gradient(#1a1a1a 70%, #e2ded8 0%);">
+            <div class="inner-circle">70%</div>
+          </div>
+          <span>語言溝通</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- (三) 個人經歷 (至少 3 項，每項需滿 50 字並附佐證) -->
+    <section id="experience" class="card">
+      <h2>個人經歷</h2>
+      
+      <article class="exp-item">
+        <h3>1. 專案活動</h3>
+        <p class="exp-date">2023.07.14</p>
+        <p>透過此專案介紹及查找資料的過程中讓我學會以同理心關注女性的經濟與衛生困境，打破生理期污名化，進而支持生理平權與友善社會的推動。</p>
+        <a href="月經貧窮介紹.pdf" target="_blank" class="evidence-link">查看簡報</a>
+
+      </article>
+
+      <article class="exp-item">
+        <h3>2. 營隊活動經驗</h3>
+        <p class="exp-date">2023.07.13 - 2023.07.15</p>
+        <p>參加這個英文營隊讓我收穫許多，透過全英文與其他參加者的互動可以練習到平常少使用到的英文口說，也結交到很多好朋友。</p>
+       <a href="IMG_0109.jpg" target="_blank" class="evidence-link">查看相關照片</a>
+
+
+      </article>
+
+      <article class="exp-item">
+        <h3>3. 社團活動經驗</h3>
+        <p class="exp-date">2023-2024</p>
+        <p>參加此社團可以培養專注力，親手完成作品的過程充滿成就感，不僅能抒發日常壓力，還能完成許多好看的作品。</p>
+       <a href="IMG_2441.jpg" target="_blank" class="evidence-link">查看相關照片</a>
+    </section>
+
+    <!-- (四) 聯絡資訊 -->
+    <section id="contact" class="card">
+      <h2>聯絡資訊</h2>
+      <br><h4>歡迎透過以下方式與我聯繫：<h4><br>
+      <ul class="contact-links">
+        <li><a href="mailto:ziyinglin115227@gmail.com">Email 寄信給我</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+    <!-- 頁尾 -->
+  <footer>
+    <a href="#" class="back-to-top">▲ 回到頂部 (Back to Top)</a>
+    <p>&copy; 2026 林孜穎. All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>

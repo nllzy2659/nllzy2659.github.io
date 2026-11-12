@@ -1,0 +1,384 @@
+/* ==========================================
+   1. 全域與字體設定 (質感色彩風格)
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
+  /* 使用帶有溫暖色調的柔和漸層背景，告別單調 */
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  color: #333333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   2. 頂部導覽列
+   ========================================== */
+header {
+  max-width: 850px;
+  margin: 3rem auto 0 auto; /* 跟隨履歷置中，上方留白，下方緊貼 main */
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3.5rem;
+  border-top: 5px solid #134769;    /* 把頂部藍色裝飾線移到導覽列最上方 */
+  border-radius: 12px 12px 0 0;     /* 只有上方兩個角是圓角 */
+  border-bottom: 1px solid #e0e4e6; /* 導覽列與下方履歷的分隔線 */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #134769;
+}
+
+.slogan {
+  display: none; 
+}
+
+/* ==========================================
+   3. 主要履歷主容器
+   ========================================== */
+main {
+  max-width: 850px;
+  margin: 0 auto 3rem auto; /* 上方設為 0，緊貼著 header */
+  background-color: #ffffff;
+  padding: 3.5rem;
+  border-radius: 0 0 12px 12px; /* 只有下方兩個角是圓角 */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  
+}
+
+
+/* 讓一般的 section 保持原本的底線分隔，但 #about 獨立出來 */
+section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* 因為 #about 已經有自己的背景色塊了，讓它不需要下方底線 */
+#about {
+  background-color: #edf3f7;
+  /* 上、右、左用 -3.5rem 往外推齊卡片邊緣，下方保留 3.5rem 間距 */
+  margin: -3.5rem -3.5rem 3.5rem -3.5rem;
+  padding: 3.5rem; /* 讓裡面的文字跟下面的 02 / SKILLS 對齊 */
+  border-radius: 0;
+  border-bottom: none;
+  }
+
+
+section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+section h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2c3e50;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  border-left: 4px solid #134769;
+  padding-left: 0.8rem;
+}
+
+
+/* ==========================================
+   4. 第一區塊：個人基本資訊 (加上背景色 + 照片固定右側)
+   ========================================== */
+#about {
+  background-color: #edf3f7; /* 整個 About 區塊都有統一的柔和淺灰藍背景 */
+  padding: 2.5rem;           /* 內距，讓四周保留呼吸空間 */
+  border-radius: 12px;       /* 圓角 */
+  margin-bottom: 3.5rem;     /* 與下方 Skills 的距離 */
+  border-bottom: none;       /* 拿掉原本的底線 */
+}
+
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* 確保是 flex-start 而不是 center */
+  gap: 2.5rem;
+}
+
+
+.about-text h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a252f;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px; /* 名字字距稍微拉開一點更俐落 */
+}
+
+.custom-slogan {
+  font-style: italic;
+  color: #4d80a2;      /* 改用跟進度條一樣的藍灰色，整體色調更統一 */
+  margin-bottom: 1rem; /* 跟下面的科系拉開距離 */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.about-text p {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.75;   /* 關鍵：增加行高，自我介紹才不會擠成一團 */
+  margin-bottom: 0.6rem;
+}
+  /* 分類小標籤的樣式 */
+.about-group {
+  margin-top: 0.9rem; /* 每個分類之間的距離 */
+}
+
+.about-tag {
+  display: inline-block;
+  background-color: transparent; /* 透明背景 */
+  color: #4d80a2;                /* 藍灰色文字 */
+  border: 1px solid #4d80a2;     /* 關鍵：1px 的藍灰色實線框框 */
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.18rem 0.6rem;
+  border-radius: 4px;            /* 想變成膠囊形狀可以改成 20px */
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+.profile-img {
+  order: 2;
+  width: 150px;
+  height: 150px;
+  margin-top: -2rem; /* 關鍵：負數會把整個圓框往上拉，覺得太高就改 -1rem，想再高就改 -2.5rem */
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 15%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(77, 128, 162, 0.2);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* [特效] 滑鼠移到照片上時微微放大 */
+.profile-img:hover {
+  transform: scale(1.03);
+}
+
+
+/* ==========================================
+   5. 第二區塊：專業技能 (圓環進度)
+   ========================================== */
+.skills-grid {
+  display: grid;
+  /* 讓 5 個項目自動平均分配在同一行，並設定最小寬度避免擠壓 */
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+
+.skill-item {
+  background: #fdfefe;
+  padding: 1.2rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #eaf2f8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.1);
+}
+
+.circular-progress {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  /* 圓環進度使用亮眼的藍色系 */
+  background: conic-gradient(#4d80a2 85%, #e2ded8 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.8rem auto;
+}
+
+.inner-circle {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #4d80a2;
+}
+
+.skill-item span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap; /* 強制文字不換行 */
+}
+
+
+/* ==========================================
+   6. 第三區塊：個人經歷
+   ========================================== */
+.exp-item {
+  background-color: #f8fafc; /* 加上柔和的淺灰藍背景 */
+  padding: 1.5rem;           /* 增加內距，讓文字不會貼到框線 */
+  margin-bottom: 1.5rem;     /* 每個方框之間的間距 */
+  border-radius: 10px;       /* 圓角設定 */
+  border: 1px solid #e2e8f0; /* 細微的邊框讓輪廓更明顯 */
+  border-left: 4px solid #4d80a2; /* 保留左側的藍色重點線條 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* [特效] 滑鼠移到經歷卡片時微微浮起 */
+.exp-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.08);
+}
+
+
+.exp-item:last-child {
+  margin-bottom: 0;
+}
+
+.exp-date {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #e67e22; /* 日期帶點溫暖橘色 */
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.exp-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.exp-item p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.evidence-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #134769;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.evidence-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   7. 第四區塊：聯絡資訊
+   ========================================== */
+.contact-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #134769;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #d4e6f1;
+  border-radius: 6px;
+  background-color: #f4f9fd;
+  transition: all 0.2s ease;
+}
+
+.contact-links a:hover {
+  background-color: #134769;
+  color: #ffffff;
+  border-color: #134769;
+  transform: translateY(-2px);
+}
+
+
+
+/* ==========================================
+   8. 頁尾
+   ========================================== */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  background: transparent;
+  border-top: 1px solid #dcdfe6;
+  /* 回到頂部按鈕 */
+.back-to-top {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  color: #134769;
+  text-decoration: none;
+  border: 1px solid #134769;
+  border-radius: 20px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* [特效] 滑鼠移到回到頂部按鈕時變色並微微上浮 */
+.back-to-top:hover {
+  background-color: #134769;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.2);
+}
+
+}
+
